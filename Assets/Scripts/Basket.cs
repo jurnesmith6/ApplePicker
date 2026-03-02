@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Basket : MonoBehaviour
 {
-    public ScoreCounter scoreCounter;
+    static public ScoreCounter scoreCounter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +37,13 @@ public class Basket : MonoBehaviour
         {
             Destroy(collidedWith);
             scoreCounter.score += 100;
-            HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
+            
+        }
+        if(collidedWith.CompareTag("Catepillar"))
+        {
+            Destroy(collidedWith);
+            scoreCounter.score -= 500;
+            
         }
     }
 }

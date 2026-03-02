@@ -50,6 +50,7 @@ public class ApplePicker : MonoBehaviour
         //if no baskets left, restart game
         if (basketList.Count == 0)
         {
+            HighScore.TRY_SET_HIGH_SCORE(Basket.scoreCounter.score);
             SceneManager.LoadScene("_Scene_0");
         }
         

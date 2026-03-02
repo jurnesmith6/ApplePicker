@@ -300,8 +300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f76e2287ba5c4189b1a3fb063b8775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AppleTree
-  applePrefab: {fileID: 0}
+  applePrefab: {fileID: 7370892627388085369, guid: 82b2e0bd43acb49cb9f193a1e208a93d, type: 3}
+  catepillarPrefab: {fileID: 5516517835015186892, guid: 0795899640eab40ffa2332ba54be7adc, type: 3}
   speed: 5
   leftAndRightEdge: 26
   changeDirChance: 0.1
   appleDropDelay: 1
+  catepillarDropDelay: 2

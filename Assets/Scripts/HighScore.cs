@@ -8,7 +8,7 @@ public class HighScore : MonoBehaviour
 {
     static  private TextMeshProUGUI _UI_TEXT;
 
-    static private int _SCORE = 1000;
+    static private int _SCORE = 0;
 
     private TextMeshProUGUI  txtCom;
 

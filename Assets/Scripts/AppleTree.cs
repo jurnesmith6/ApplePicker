@@ -8,6 +8,7 @@ public class AppleTree : MonoBehaviour
 {
 
     [Header("Inscribed")] public GameObject applePrefab;
+    [Header("Inscribed")] public GameObject catepillarPrefab;
 
     public float speed = 1f;
 
@@ -17,17 +18,37 @@ public class AppleTree : MonoBehaviour
 
     public float appleDropDelay = 1f;
     
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Invoke("DropApple",2f);
+       
     }
 
     void DropApple()
     {
-        GameObject apple = Instantiate<GameObject>(applePrefab);
-        apple.transform.position = transform.position;
+        float chance = Random.Range(0f, 1f);
+        
+        if (chance > 0.2f)
+        {
+            GameObject apple = Instantiate<GameObject>(applePrefab);
+            apple.transform.position = transform.position;
+            
+        }
+        else
+        {
+            DropCatepillar();
+        }
+        
         Invoke("DropApple",appleDropDelay);
+    }
+
+    void DropCatepillar()
+    {
+        GameObject catepillar = Instantiate<GameObject>(catepillarPrefab);
+        catepillar.transform.position = transform.position;
+        
     }
 
     // Update is called once per frame
